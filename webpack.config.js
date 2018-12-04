@@ -5,8 +5,7 @@ const MODE = dev;
 const enabledSourceMap = (MODE === dev);
 
 module.exports = {
-    // モード値を production に設定すると最適化された状態で、
-    // development に設定するとソースマップ有効でJSファイルが出力される
+    entry: './src/js/index.js',
     mode: MODE,
     module: {
         rules: [
