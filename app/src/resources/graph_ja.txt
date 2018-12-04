@@ -1,0 +1,11 @@
+alreadyConnected=ノードが接続されている
+containsValidationErrors=検証エラーが含まれます
+updatingDocument=ドキュメントを更新します。 お待ちください......
+updatingSelection=選択したオプションを更新します。 お待ちください......
+collapse-expand=折りたたみ/展開
+doubleClickOrientation=ダブルクリックして方向を変更する
+close=閉じる
+error=エラー
+done=完了
+cancel=キャンセル
+ok=OK

@@ -1,5 +1,4 @@
 // JS
-import './libs/mxClient.min.js';
 import {onLoad} from "./sub.js";
 
 // CSS

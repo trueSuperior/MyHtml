@@ -6,12 +6,12 @@ const webpack = require('webpack');
 const MODE = dev;
 const enabledSourceMap = (MODE === dev);
 
-
-module.exports = {
+ module.exports = {
     mode: MODE,
     entry: './app/src/js/index.js',
     output: {
-        path: path.resolve(__dirname, 'public/js/'),
+        path: path.resolve(__dirname, 'public/'),
+        publicPath: path.resolve(__dirname, 'public/'),
         filename: './[name].bundle.js'
     },
     module: {

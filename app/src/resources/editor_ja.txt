@@ -1,0 +1,5 @@
+askZoom=ズーム(%25)
+properties=プロパティ
+outline=アウトライン
+tasks=タスク
+help=ヘルプ
