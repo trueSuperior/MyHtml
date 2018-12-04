@@ -1,12 +1,19 @@
 const dev = 'development';
 const pro = 'production';
+const path = require('path');
+const webpack = require('webpack');
 
 const MODE = dev;
 const enabledSourceMap = (MODE === dev);
 
+
 module.exports = {
-    entry: './src/js/index.js',
     mode: MODE,
+    entry: './app/src/js/index.js',
+    output: {
+        path: path.resolve(__dirname, 'public/js/'),
+        filename: './[name].bundle.js'
+    },
     module: {
         rules: [
             {
@@ -31,7 +38,7 @@ module.exports = {
     devServer: {
         inline: true,
         watchContentBase: true,
-        contentBase: 'src',
+        contentBase: path.resolve(__dirname, 'public'),
         open: true
     }
 };
