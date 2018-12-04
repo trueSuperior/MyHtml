@@ -8,7 +8,7 @@
 
 ## はじめかた
 1. インストール  
-`npm i -D`
+`npm install`
 package.jsonの依存パッケージがインストールされる
 2. スタート  
 `npm run start`
