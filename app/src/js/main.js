@@ -8,8 +8,6 @@ export function onLoad() {
 
 function load() {
     hello();
-    var obj = {name:"ikeda"};
-    console.log(obj);
 }
 
 function hello() {

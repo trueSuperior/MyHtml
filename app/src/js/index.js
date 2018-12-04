@@ -1,5 +1,5 @@
 // JS
-import {onLoad} from "./sub.js";
+import {onLoad} from "./main.js";
 
 // CSS
 import '../css/style.css';
