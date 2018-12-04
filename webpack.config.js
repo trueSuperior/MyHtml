@@ -2,7 +2,7 @@ const dev = 'development';
 const pro = 'production';
 
 const MODE = dev;
-const enabledSourceMap = (Mode === dev);
+const enabledSourceMap = (MODE === dev);
 
 module.exports = {
     // モード値を production に設定すると最適化された状態で、
