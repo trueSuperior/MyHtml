@@ -8,6 +8,7 @@
 
 ## はじめかた
 1. インストール  
-`npm i -D webpack webpack-cli webpack-dev-server`  
+`npm i -D`
+package.jsonの依存パッケージがインストールされる
 2. スタート  
 `npm run start`
