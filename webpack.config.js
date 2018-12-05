@@ -26,14 +26,14 @@ const mxGraphConf = {
         use: [
             'imports-loader?mxBasePath=>"/libs/mxGraph/src/"',
             'imports-loader?mxLoadResources=>false',
-            'exports-loader?mxEvent,mxGraph,mxRubberband'
+            'exports-loader?mxClient,mxGraph,mxRubberband,mxUtils,mxEvent'
         ]
     },
     plugin: {
         // node_moduleのアセットを公開ディレクトリに配置する
         from: path.resolve(__dirname, './node_modules/mxgraph/javascript/src'),
         to: path.resolve(__dirname, 'public/libs/mxGraph/src'),
-        ignore: ['.*']
+        ignore: ['.*','js']
     }
 };
 
