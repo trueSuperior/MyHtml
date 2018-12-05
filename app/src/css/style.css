@@ -1,12 +1,3 @@
-body {
-    background: lightgray;
-}
-
-#graphContainer {
-    position:relative;
-    overflow:hidden;
-    width:321px;
-    height:241px;
-    background:ghostwhite;
-    cursor:default;
+* {
+    color: gray;
 }
