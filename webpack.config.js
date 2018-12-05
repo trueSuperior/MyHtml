@@ -8,17 +8,14 @@ const MODE = dev;
 const enabledSourceMap = (MODE === dev);
 
 /*
-    mxGraphのnpmパッケージにインポートできない致命的なバグがあった。
-    この問題に関してのIssueは上がっているが現状管理者からは無視され続けている模様。
-    しかしこちらとしてはできる限りパッケージ管理にnpm経由のスタイルをとりたい。
-    ビルド時に外部からExport/Importの記述を追加して、別モジュールからmxGraphを呼び出せるようにしている。
-    おかげで開発に必要な依存ライブラリが増加した。
+    # mxGraph用の追加設定
+    ES6モジュール化に対応していないのでビルド時にExport/Importの記述を追加して、
+    別モジュールから呼び出せるようにしている。
+
+    モジュール化に依存したライブラリ以下３つ
     - imports-loader
     - exports-loader
     - copy-webpack-plugin
-
-    参考にしたGithub Issue
-    https://github.com/jgraph/mxgraph/issues/169
 */
 const mxGraphConf = {
     rule: {
@@ -26,11 +23,11 @@ const mxGraphConf = {
         use: [
             'imports-loader?mxBasePath=>"/libs/mxGraph/src/"',
             'imports-loader?mxLoadResources=>false',
-            'exports-loader?mxClient,mxGraph,mxRubberband,mxUtils,mxEvent'
+            'exports-loader?mxClient,mxGraph,mxRubberband,mxUtils,mxEvent,mxConstants,mxEdgeStyle'
         ]
     },
     plugin: {
-        // node_moduleのアセットを公開ディレクトリに配置する
+        // リソースを公開ディレクトリに配置する
         from: path.resolve(__dirname, './node_modules/mxgraph/javascript/src'),
         to: path.resolve(__dirname, 'public/libs/mxGraph/src'),
         ignore: ['.*','js']
