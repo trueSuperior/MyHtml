@@ -1,12 +1,20 @@
 # グラフエディターサンプル
+## 環境
+- Node.js 11.3.0
 
-## はじめかた
-1. インストール  
-`npm install`  
+## インストール
+```sh
+npm install
+```
 package.jsonの依存パッケージがインストールされる
 
-2. ビルド  
-`npm run build`
+## ビルド
+```sh
+npm run build
+```
 
-3. スタート  
-`npm run start`
+## ローカルサーバー起動
+```sh
+npm run start
+```
+ホットロード機能付き
