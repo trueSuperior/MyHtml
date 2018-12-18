@@ -8,13 +8,17 @@ const enabledSourceMap = (MODE === dev);
 
 module.exports = {
     mode: MODE,
-    entry: './app/src/js/index.js',
+    entry: './app/src/ts/index.ts',
     output: {
         path: path.resolve(__dirname, 'public/'),
         filename: './[name].bundle.js'
     },
     module: {
         rules: [
+            {
+                test: /\.ts$/,
+                use: 'ts-loader'
+            },
             {
                 test: /\.css/,
                 use: [
@@ -30,6 +34,9 @@ module.exports = {
                 ],
             },
         ]
+    },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"]
     },
 
     // ローカル開発用環境を立ち上げる

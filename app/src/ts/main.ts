@@ -25,15 +25,15 @@ function hello() {
  */
 function showGlobalVariables() {
     console.log((function () {
-        var propsOrig = [];
-        var propsGlobal = {};
-        var win = window.open();
+        let propsOrig: string[] = [];
+        let propsGlobal = {};
+        let win = window.open();
         for (var i in win) {
             propsOrig.push(i);
         }
         win.close();
         for (var i in window) {
-            if (!propsOrig.includes(i)) {
+            if (propsOrig.indexOf(i) === -1) {
                 propsGlobal[i] = window[i]
             }
         }
