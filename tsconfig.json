@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        // "outDir": "./built",
+        // "allowJs": true,
+        "target": "es5",
+        "module": "es2015"
+    },
+    // "include": [
+    //     "./app/src/js/*"
+    // ]
+}
